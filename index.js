@@ -21,7 +21,7 @@ function myFunction(){
         size.trim() != "Select size"){
         // console.log(location + "\t" + area + "\t" + size + "\t"  + floor + "\t" + furnished + "\t"  + segment + "\t" + stilt );
 
-        fetch('/text.json').then(function(response){
+        fetch('./text.json').then(function(response){
 
             return response.json();
         
