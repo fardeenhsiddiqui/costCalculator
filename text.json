@@ -1,0 +1,16 @@
+{
+    "semiFurnished": 
+        {
+            "basic" : "1650",
+            "premium" : "2200",
+            "luxury" : "3200", 
+            "ultraLuxury" : "3600"
+        },
+    "fullFurnished": 
+        {
+            "basic" : "1650",
+            "premium" : "2200",
+            "luxury" : "3200", 
+            "ultraLuxury" : "3600"
+        }
+}

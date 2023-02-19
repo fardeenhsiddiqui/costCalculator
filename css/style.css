@@ -1,0 +1,35 @@
+*{
+    font-family: 'IBM Plex Serif',sans-serif;
+    line-height: 40px;
+    font-weight: 600;
+
+}
+body {
+    overflow-x: hidden; /* Hide scrollbars */
+  }
+.background-colour{
+    background: url(/images/bg.svg) center bottom / cover no-repeat rgb(63, 64, 121);
+    height: 500px;
+    width: 100%;
+    display: table;
+    /* background-color: #ff7b79; */
+}
+
+.background-colour .content {
+    display: table-cell;
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2.3125rem;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0 0 0 / 25%) 1px 1px 2px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+}
+
+.background-colour .content h3 {
+    margin: -80px;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}

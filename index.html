@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="fixed-top">
+        <div class="card rounded-0">
+            <div class="card-body p-1">
+                <!-- <div class="container"> -->
+                <!-- <div class="d-flex justify-content-between"> -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid px-3 mx-2">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+                <!-- </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </header>
+    <div class="row m-0">
+        <div class="col-lg-12 px-0">
+            <div class="form-bg background-colour img-fluid">
+                <div class="content">
+                    <h3>Cost Calculator</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 my-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 border border-top-0 border-start-0 border-bottom-0 mb-2">
+                        <div class="card bg-light border-2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 my-3">
+                                        <img src="images/location-area.png" class="d-inline" alt="..." height="93px"
+                                            weight="95px">
+                                        <h3 class="ml-3 d-inline">Location and Area</h3>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h5>Disclaimer: The costs indicated are approximate costs for each resource.
+                                            Actual cost estimates may vary for your city. Please check with your
+                                            contractor or visit our nearest UBS store for a custom cost estimate as per
+                                            your requirement. This amount is an approximate amount for construction area
+                                            & it does not include compound wall area.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="card border-2 bg-dark mb-2">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-center text-light">Cost Calculator</h5>
+                            </div>
+                        </div>
+                        <div class="card border-2">
+                            <div class="card-body">
+                                <!-- <form action=""> -->
+                                    <div class="row p-3">
+                                        <div class="col-12 col-md-12 m-1">
+                                            <label for="location" class="form-label fw-bold">Location <span class="required">*</span></label>
+                                            <select id="location" class="form-select" required>
+                                                <option selected>Select Location</option>
+                                                <option value="delhi">Delhi</option>
+                                                <option value="ncr">Delhi NCR</option>
+                                                <option value="gurgoan">Gurgoan</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-12 m-1">
+                                            <label for="area" class="form-label fw-bold">Area In <span class="required">*</span></label>
+                                            <select id="area" class="form-select" required>
+                                                <option selected>Select Area in sq. ft or sq. guz</option>
+                                                <option value="ft">Square ft.</option>
+                                                <option value="guz">Sqaure guz</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-12 m-1">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="size" class="form-label fw-bold">Plot size in <span class="required">*</span></label>
+                                                    <select id="size" class="form-select" required>
+                                                        <option selected>Select size</option>
+                                                        <option value="100">100</option>
+                                                        <option value="1500">150</option>
+                                                        <option value="200">200</option>
+                                                        <option value="250">250</option>
+                                                        <option value="300">300</option>
+                                                        <option value="350">350</option>
+                                                        <option value="400">400</option>
+                                                        <option value="500">500</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="floor" class="form-label fw-bold">Building Floor</label>
+                                                    <select id="floor" class="form-select" required>
+                                                        <option value="1" selected>1 Floor</option>
+                                                        <option value="2">2 Floor</option>
+                                                        <option value="3">3 Floor</option>
+                                                        <option value="4">4 Floor</option>
+                                                        <option value="5">5 Floor</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-12 m-1">
+                                            <label for="furnished" class="form-label fw-bold">Furnishing</label>
+                                            <select id="furnished" class="form-select" required>
+                                                <option value="fullFurnished" selected>Fully Furnished</option>
+                                                <option value="semiFurnished">Semi Furnished</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-12 m-1">
+                                            <label for="segment" class="form-label fw-bold">Segment of work</label>
+                                            <select id="segment" class="form-select" required>
+                                                <option value="basic" selected>Basic</option>
+                                                <option value="premium">Premium</option>
+                                                <option value="luxury">Luxury</option>
+                                                <option value="ultraLuxury">Ultra Luxury</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-12 mt-2 mx-1">
+                                            <label for="stilt" class="form-label fw-bold">Stilt <span class="required">*</span></label>
+                                            <span class="mx-2"></span>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input mt-2" type="radio" name="stilt"
+                                                    id="stil1" value="1">
+                                                <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input mt-2" type="radio" name="stilt"
+                                                    id="stilt2" value="0">
+                                                <label class="form-check-label" for="inlineRadio2">No</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-12 mt-2 mx-1">
+                                            <div class="d-flex justify-content-end">
+                                                <button type="submit" class="btn btn-outline-info fw-bold" onclick="myFunction()">Cost Calculate</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="exampleModalLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="card">
+        <div id="msg"></div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
