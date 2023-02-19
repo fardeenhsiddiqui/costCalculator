@@ -8,7 +8,7 @@ body {
     overflow-x: hidden; /* Hide scrollbars */
   }
 .background-colour{
-    background: url(/images/bg.svg) center bottom / cover no-repeat rgb(63, 64, 121);
+    background: url(../images/bg.svg) center bottom / cover no-repeat rgb(63, 64, 121);
     height: 500px;
     width: 100%;
     display: table;
