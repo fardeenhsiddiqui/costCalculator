@@ -51,6 +51,8 @@ function validation(){
     // console.log("2. "+ (document.getElementById("size").value.trim() === ''))
     if(isNaN(parseInt(document.getElementById("size").value.trim(),10))){
         document.getElementById("sizeValidation").innerHTML = "Please Provide Valide Number *";
+    }else{
+        document.getElementById("sizeValidation").innerHTML = "";
     }
 }
 
