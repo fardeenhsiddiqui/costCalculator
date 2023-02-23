@@ -100,7 +100,7 @@
                                         <div class="col-12 col-md-12 m-1">
                                             <label for="area" class="form-label fw-bold">Area In <span class="required">*</span></label>
                                             <select id="area" class="form-select" required>
-                                                <option selected>Select Area in sq. ft or sq. guz</option>
+                                                <option selected>Select Area</option>
                                                 <option value="ft">Square ft.</option>
                                                 <option value="guz">Sqaure guz</option>
                                             </select>
@@ -109,7 +109,7 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <label for="size" class="form-label fw-bold">Plot size in <span class="required">*</span></label>
-                                                    <select id="size" class="form-select" required>
+                                                    <!-- <select id="size" class="form-select" required>
                                                         <option selected>Select size</option>
                                                         <option value="100">100</option>
                                                         <option value="1500">150</option>
@@ -119,7 +119,9 @@
                                                         <option value="350">350</option>
                                                         <option value="400">400</option>
                                                         <option value="500">500</option>
-                                                    </select>
+                                                    </select> -->
+                                                    <input type="text" class="form-control" id="size" placeholder="Please Enter Valid Number" onchange="validation()">
+                                                    <div id="sizeValidation" class="form-text text-danger"></div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="floor" class="form-label fw-bold">Building Floor</label>

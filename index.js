@@ -16,11 +16,8 @@ function myFunction(){
         stilt = ele[i].value;
     }
     
-    if(location.trim() != "Select Location" && 
-        area.trim() != "Select Area in sq. ft or sq. guz" && 
-        size.trim() != "Select size"){
-        // console.log(location + "\t" + area + "\t" + size + "\t"  + floor + "\t" + furnished + "\t"  + segment + "\t" + stilt );
-
+    if(location.trim() != "Select Location" && area.trim() != "Select Area in sq. ft or sq. guz" && !(isNaN(parseInt(document.getElementById("size").value.trim(),10)))){
+        
         fetch('text.json').then(function(response){
 
             return response.json();
@@ -29,13 +26,14 @@ function myFunction(){
             furvalue = data[furnished][segment];
 
             if(area.trim() == "guz"){
-                cost =  9 * size * (floor+stilt) * furvalue;
+                cost =  9 * size * (Number(floor) + Number(stilt)) * furvalue;
             }else{
-                cost = size * (floor+stilt) * furvalue;
+                cost = size * (Number(floor)+ Number(stilt)) * furvalue;
             }
 
             $("#errorModal .modal-title").html("Total Cost");
-            $("#errorModal .modal-body").html("Rs. " + new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(cost));
+            // $("#errorModal .modal-body").html("Rs. " + new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(cost));
+            $("#errorModal .modal-body").html(cost.toLocaleString('en-IN',{style: 'currency', currency: 'INR'}));
             $("#errorModal").modal("show");
             
         }).catch(function(err){
@@ -48,6 +46,14 @@ function myFunction(){
     }
     
 }
+function validation(){
+    // console.log("1. " + parseInt(document.getElementById("size").value.trim(),10));
+    // console.log("2. "+ (document.getElementById("size").value.trim() === ''))
+    if(isNaN(parseInt(document.getElementById("size").value.trim(),10))){
+        document.getElementById("sizeValidation").innerHTML = "Please Provide Valide Number *";
+    }
+}
+
 
 
 

@@ -8,9 +8,9 @@
         },
     "fullFurnished": 
         {
-            "basic" : "1650",
-            "premium" : "2200",
-            "luxury" : "3200", 
-            "ultraLuxury" : "3600"
+            "basic" : "1950",
+            "premium" : "2660",
+            "luxury" : "3500", 
+            "ultraLuxury" : "3900"
         }
 }
