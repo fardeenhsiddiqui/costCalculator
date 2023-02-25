@@ -2,7 +2,7 @@
     font-family: 'IBM Plex Serif',sans-serif;
     line-height: 40px;
     font-weight: 600;
-
+    overflow-x: hidden;
 }
 body {
     overflow-x: hidden; /* Hide scrollbars */
